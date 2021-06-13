@@ -37,7 +37,7 @@ function router(nav){
     });
     
     booksRouter.get('/:id', function(req,res){
-        const id = req.params.id
+        const id = req.params.id;
         res.render('book',{
             nav,
             title:'Library',
