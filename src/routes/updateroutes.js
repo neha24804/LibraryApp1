@@ -4,9 +4,9 @@ const Bookdata = require("./model/Bookdata");
 const Authordata = require("./model/Authordata");
 
 function router(nav) {
-  updateRouter.get("/book/:id", function (req, res) {
+  updateRouter.get("/book/:id", function(req, res) {
     const id = req.params.id;
-    Bookdata.findOne({ _id: id }).then(function (book) {
+    Bookdata.findOne({ _id: id }).then(function(book) {
       res.render("bookupdate", {
         nav,
         title: "Update Book",
@@ -14,9 +14,9 @@ function router(nav) {
       });
     });
   });
-  updateRouter.get("/author/:id", function (req, res) {
+  updateRouter.get("/author/:id", function(req, res) {
     const id = req.params.id;
-    Authordata.findOne({ _id: id }).then(function (author) {
+    Authordata.findOne({ _id: id }).then(function(author) {
       res.render("authorupdate", {
         nav,
         title: "Update Author",
@@ -24,7 +24,7 @@ function router(nav) {
       });
     });
   });
-  updateRouter.post("/book/:id/updated", function (req, res) {
+  updateRouter.post("/book/:id/updated", function(req, res) {
     const id = req.params.id;
     var newbook = {
       title: req.body.title,
@@ -33,7 +33,7 @@ function router(nav) {
       image: req.body.image,
       about: req.body.about,
     };
-    Bookdata.updateOne({ _id: id }, { $set: newbook }, function () {
+    Bookdata.updateOne({ _id: id }, { $set: newbook }, function() {
       res.redirect("/books");
     });
   });
@@ -46,7 +46,7 @@ function router(nav) {
       image: req.body.authorimage,
       about: req.body.authorabout,
     };
-    Authordata.updateOne({ _id: id }, { $set: newauthor }, function () {
+    Authordata.updateOne({ _id: id }, { $set: newauthor }, function() {
       res.redirect("/authors");
     });
   });
