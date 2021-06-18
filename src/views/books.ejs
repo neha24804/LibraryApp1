@@ -94,15 +94,19 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=books[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/images/<%=books[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=books[i].title%></h3>
               <div class="row">
                 <div class="col-xs-9">
+                  <div class="text-right">
+                    <a href="/update/book/<%=books[i]._id%>" class="btn btn-success">Update</a>
+                    <a href="/delete/book/<%=books[i]._id%>" class="btn btn-danger">Delete</a>
+                  </div>
                   <h4><span class="label label-default"><%=books[i].author%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].genre%>  • 
-                    <a href="/books/<%=i%>" class="text-muted">Read More</a></small>
+                    <a href="/books/<%=books[i]._id%>" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
@@ -113,10 +117,8 @@
           <hr>
           
           <!--/stories-->
-          
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
         
+          <a href="/addbook" class="btn btn-primary pull-right btnNext">Add a book <i class="glyphicon glyphicon-chevron-right"></i></a>
           
         </div>
       </div>

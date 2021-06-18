@@ -3,15 +3,15 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title><%=title%></title>
+		<title>Library</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -23,14 +23,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/home" class="navbar-brand">Home</a>
+      <a href="/" class="navbar-brand">Home</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <%for(i=0;i<nav.length;i++){%>
-        <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
-        </li>
+        <% for(i=0;i<nav.length;i++){%>
+          <li>
+            <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+          </li>
         <%}%>
       </ul>
       <ul class="nav navbar-right navbar-nav">
@@ -51,7 +51,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1>Author
+        <h1>Welcome
           <p class="lead"></p>
         </h1>
       </div>
@@ -89,42 +89,20 @@
           
           
           
-          <!--/stories-->
-          <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=author.image%>" style="width:100px;height:100px" class="img-circle"></a>
+          <!-- Welcome content-->
+            <div>
+                <h2>"Libraries store the energy that fuels the imagination. They open up windows to the world and inspire us to explore and achieve, and contribute to improving our quality of life."
+                     <br>
+                    Sidney Sheldon 
+                    </h2>
             </div>
-            <div class="col-md-10 col-sm-9">
-              <h3><%=author.name%></h3>
-              <div class="text-right">
-                <a href="/update/author/<%=author._id%>" class="btn btn-success">Update</a>
-                <a href="/delete/author/<%=author._id%>" class="btn btn-danger">Delete</a>
-              </div>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=author.place%></span></h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=author.genre%>  </small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              
-              <h4 class="display-4">About</h4>
-              <p><%=author.about%></p>
-            </div>
-          </div>
           
-          <!--/stories-->
+          <!--/ Welcome content-->
           
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-        
+
           
         </div>
-      </div>
-                                                                                       
-	                                                
-                                                      
+      </div>                                      
    	</div><!--/col-12-->
   </div>
 </div>

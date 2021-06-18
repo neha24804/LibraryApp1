@@ -7,8 +7,9 @@ function router(nav) {
     { link: "/login", name: "Login" },
     { link: "/signup", name: "Sign-up" },
   ];
+  
   signupRouter.get("/", function (req, res) {
-    res.render("signup", { nav, title: "Signup" });
+    res.render("signUp", { nav, title: "Signup" });
   });
   signupRouter.post("/confirm", function (req, res, next) {
     var newuser = {
@@ -18,12 +19,10 @@ function router(nav) {
       password: req.body.password,
     };
     var user = Userdata(newuser);
-    user
-      .save()
-      .then(function () {
+    
+      user.save().then(function(){
         res.redirect("/home");
-      })
-      .catch(function (error) {
+      }).catch(function(error){
         console.log(error);
       });
   });

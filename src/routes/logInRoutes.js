@@ -33,4 +33,4 @@ function router(nav) {
     return loginRouter;
 }
 
-module.exports = reouter;
+module.exports = router;
