@@ -4,10 +4,10 @@ const Bookdata = require("./model/Bookdata");
 const Authordata = require("./model/Authordata");
 
 function router(nav) {
-  addRouter.get("/", function (req, res) {
+  addRouter.get("/", function(req, res){
     res.render("addbook", { nav, title: "Add Book" });
   });
-  addRouter.post("/add", function (req, res) {
+  addRouter.post("/add", function(req, res){
     var bookitem = {
       title: req.body.title,
       author: req.body.author,

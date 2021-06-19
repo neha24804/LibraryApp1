@@ -4,9 +4,9 @@ const Bookdata = require("./model/Bookdata");
 const Authordata = require("./model/Authordata");
 
 function router(nav) {
-  deleteRouter.get("/book/:id", function (req, res) {
+  deleteRouter.get("/book/:id", function(req, res){
     const id = req.params.id;
-    Bookdata.findOne({ _id: id }).then(function (book) {
+    Bookdata.findOne({ _id: id }).then(function(book){
       res.render("bookdel", {
         nav,
         title: "Delete Book",
@@ -14,9 +14,9 @@ function router(nav) {
       });
     });
   });
-  deleteRouter.get("/author/:id", function (req, res) {
+  deleteRouter.get("/author/:id", function(req, res){
     const id = req.params.id;
-    Authordata.findOne({ _id: id }).then(function (author) {
+    Authordata.findOne({ _id: id }).then(function(author){
       res.render("authordel", {
         nav,
         title: "Delete Author",
@@ -24,15 +24,15 @@ function router(nav) {
       });
     });
   });
-  deleteRouter.get("/book/:id/confirm", function (req, res) {
+  deleteRouter.get("/book/:id/confirm", function(req, res){
     const id = req.params.id;
-    Bookdata.deleteOne({ _id: id }).then(function () {
+    Bookdata.deleteOne({ _id: id }).then(function() {
       res.redirect("/books");
     });
   });
-  deleteRouter.get("/author/:id/confirm", function (req, res) {
+  deleteRouter.get("/author/:id/confirm", function(req, res){
     const id = req.params.id;
-    Authordata.deleteOne({ _id: id }).then(function () {
+    Authordata.deleteOne({ _id: id }).then(function(){
       res.redirect("/authors");
     });
   });

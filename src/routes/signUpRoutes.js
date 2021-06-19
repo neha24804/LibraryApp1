@@ -8,10 +8,10 @@ function router(nav) {
     { link: "/signup", name: "Sign-up" },
   ];
   
-  signupRouter.get("/", function (req, res) {
+  signupRouter.get("/", function (req, res){
     res.render("signUp", { nav, title: "Signup" });
   });
-  signupRouter.post("/confirm", function (req, res, next) {
+  signupRouter.post("/confirm", function (req, res, next){
     var newuser = {
       email: req.body.email,
       mobile: req.body.mobile,
