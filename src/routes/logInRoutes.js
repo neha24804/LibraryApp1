@@ -8,7 +8,7 @@ function router(nav) {
       { link: "/signup", name: "Sign-up" },
     ];
     loginRouter.get("/", function(req,res){
-        res.render("login",{
+        res.render("logIn",{
             nav,
             title: "Login"
         });
