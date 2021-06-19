@@ -15,7 +15,7 @@ const authorRouter = require('./src/routes/authorRoutes')(nav);
 const signUpRouter = require('./src/routes/signUpRoutes')(nav);
 const logInRouter = require('./src/routes/logInRoutes')(nav);
 const addRouter = require("./src/routes/addRoutes")(nav);
-const updateRouter = require("./src/routes/updateRoutes")(nav);
+const updateRouter = require("./src/routes/updateroutes")(nav);
 const deleteRouter = require("./src/routes/deleteRoutes")(nav);
 
 app.use(express.urlencoded({
