@@ -4,7 +4,7 @@ const Userdata = require("./model/Userdata");
 
 function router(nav) {
     var nav = [
-      { link: "/login", name: "Login" },
+      { link: "/logIn", name: "Login" },
       { link: "/signup", name: "Sign-up" },
     ];
     loginRouter.get("/", function(req,res){
